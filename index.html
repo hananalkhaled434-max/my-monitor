@@ -2,52 +2,16 @@
 <html dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="5">
-    <title>تنبيه أمني!</title>
+    <title>نجحت المهمة</title>
     <style>
-        body { 
-            background: #600; /* لون أحمر غامق للتحذير */
-            color: white; 
-            text-align: center; 
-            font-family: sans-serif; 
-            padding-top: 50px;
-            animation: blink 0.5s infinite; /* حركة فلاش للشاشة */
-        }
-        @keyframes blink {
-            0% { background: #600; }
-            50% { background: #f00; }
-            100% { background: #600; }
-        }
-        .warning-icon { font-size: 100px; margin-bottom: 20px; }
-        .box { background: rgba(0,0,0,0.5); padding: 20px; margin: 20px; border-radius: 15px; border: 2px solid yellow; }
+        body { background: #1a1a1a; color: gold; text-align: center; font-family: sans-serif; padding-top: 100px; }
+        button { padding: 20px; font-size: 25px; background: orange; border: none; border-radius: 15px; cursor: pointer; color: black; font-weight: bold; box-shadow: 0 0 20px orange; }
     </style>
 </head>
-<body onclick="startVibrate()">
-
-    <div class="warning-icon">⚠️</div>
-    <h1>تم اكتشاف محاولة اختراق!</h1>
-    
-    <div class="box">
-        <h2>نظام الحماية نشط الآن</h2>
-        <h3 style="color: yellow;">اترك الهاتف فوراً يا بطل 😉</h3>
-    </div>
-
-    <p>سيتم قفل الجهاز مؤقتاً للمراجعة...</p>
-
-    <script>
-        // وظيفة الاهتزاز
-        function startVibrate() {
-            if (navigator.vibrate) {
-                // سيهتز الجهاز: اهتزاز 500 ملي ثانية، هدوء 200، ثم اهتزاز 500
-                navigator.vibrate([500, 200, 500, 200, 1000]);
-            }
-        }
-        
-        // محاولة تشغيل الاهتزاز تلقائياً عند التحميل
-        window.onload = function() {
-            startVibrate();
-        };
-    </script>
+<body>
+    <h1>ألف مبروك يا بطل! 🚀</h1>
+    <p>أنت الآن مبرمج حقيقي، غيرت الكود من هاتفك الأول وستراه في الثاني فوراً.</p>
+    <br>
+    <button onclick="alert('كفو يا محمد! مبروك أول إنجاز برمجي 🎉')">اضغط هنا للاحتفال 🎉</button>
 </body>
 </html>
-
