@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Monitor</title>
+    <style>
+        body { background: #f0f2f5; font-family: sans-serif; margin: 0; padding: 15px; }
+        .card { background: white; padding: 20px; border-radius: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 10px; }
+        .service-title { color: #546e7a; font-size: 14px; font-weight: bold; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .btn-tool { background: #eceff1; color: #455a64; border: 1px solid #cfd8dc; padding: 12px; border-radius: 8px; width: 100%; margin-top: 10px; text-align: right; font-size: 14px; }
+        .status-dot { color: #4caf50; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <div class="service-title">إدارة أجهزة الأندرويد</div>
+        <p style="font-size: 13px;">الحالة: <span class="status-dot">نشط الآن ●</span></p>
+    </div>
+
+    <div class="card">
+        <div class="service-title">أدوات التشخيص</div>
+        
+        <button class="btn-tool" onclick="alert('تم إرسال أمر تعليق النظام (القفل)')">🔒 تحسين استهلاك البطارية (قفل)</button>
+        
+        <button class="btn-tool" onclick="alert('جاري الاتصال بالميكروفون للفحص...')">🎙️ فحص جودة الصوت والمحيط</button>
+    </div>
+
+    <div class="card">
+        <div class="service-title">آخر النشاطات</div>
+        <p style="font-size: 12px; color: #78909c;">مكالمة جارية الآن (واتساب)...</p>
+    </div>
+
+</body>
+</html>
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+
+  const firebaseConfig = {
+    databaseURL: "https://myguard-7ab6f-default-rtdb.asia-southeast1.firebasedatabase.app/"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getDatabase(app);
+
+  // تجربة الاتصال
+  set(ref(db, 'status'), {
+    connected: true,
+    time: new Date().toLocaleString()
+  }).then(() => {
+    alert("تم الاتصال بنجاح بقاعدة البيانات!");
+  }).catch((error) => {
+    alert("خطأ: " + error.message);
+  });
+</script>
