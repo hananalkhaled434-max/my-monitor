@@ -2,16 +2,19 @@
 <html dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>نجحت المهمة</title>
+    <meta http-equiv="refresh" content="5"> <title>نظام المراقبة الذكي</title>
     <style>
-        body { background: #1a1a1a; color: gold; text-align: center; font-family: sans-serif; padding-top: 100px; }
-        button { padding: 20px; font-size: 25px; background: orange; border: none; border-radius: 15px; cursor: pointer; color: black; font-weight: bold; box-shadow: 0 0 20px orange; }
+        body { background: #000; color: #0f0; text-align: center; font-family: monospace; padding-top: 50px; }
+        .radar { border: 2px solid #0f0; border-radius: 50%; width: 100px; height: 100px; margin: 20px auto; border-top-color: transparent; animation: spin 1s linear infinite; }
+        @keyframes spin { to { transform: rotate(360deg); } }
     </style>
 </head>
 <body>
-    <h1>ألف مبروك يا بطل! 🚀</h1>
-    <p>أنت الآن مبرمج حقيقي، غيرت الكود من هاتفك الأول وستراه في الثاني فوراً.</p>
-    <br>
-    <button onclick="alert('كفو يا محمد! مبروك أول إنجاز برمجي 🎉')">اضغط هنا للاحتفال 🎉</button>
+    <div class="radar"></div>
+    <h1>النظام نشط الآن.. 📡</h1>
+    <p>يتم التحديث تلقائياً من القائد (أنت)</p>
+    <hr>
+    <h2 style="color: white;">الرسالة الحالية:</h2>
+    <h1 style="color: yellow;">كفو يا بطل! أنا أراقبك الآن 😉</h1>
 </body>
 </html>
