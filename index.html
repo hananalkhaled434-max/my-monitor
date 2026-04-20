@@ -3,30 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="refresh" content="10">
-    <title>سليم البطل</title>
+    <title>لوحة تحكم القائد</title>
     <style>
-        body { background: #1a1a1a; color: white; text-align: center; font-family: sans-serif; padding-top: 50px; }
-        .kfo { font-size: 60px; color: #ffeb3b; margin: 0; animation: blink 1s infinite; }
-        @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
-        .btn { background: #ff9800; color: white; border: none; padding: 15px 30px; font-size: 20px; border-radius: 10px; margin-top: 20px; cursor: pointer; }
-        #msg { display: none; background: white; color: black; padding: 20px; border-radius: 15px; margin: 20px; border: 3px solid #ff9800; }
+        /* تصميم الخلفية الاحترافية */
+        body { 
+            background: radial-gradient(circle, #1a1a2e 0%, #0f0f1a 100%);
+            color: #00d4ff; 
+            text-align: center; 
+            font-family: 'Segoe UI', sans-serif; 
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* إطار الواجهة "الحلوة" */
+        .dashboard {
+            border: 2px solid #00d4ff;
+            padding: 40px;
+            border-radius: 20px;
+            background: rgba(0, 212, 255, 0.05);
+            box-shadow: 0 0 30px rgba(0, 212, 255, 0.2);
+            position: relative;
+        }
+
+        /* اسمك واسم سليم بتأثير مضيء */
+        .names {
+            font-size: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #fff;
+            text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
+            margin: 20px 0;
+        }
+
+        /* زر الرسالة */
+        .action-btn {
+            background: transparent;
+            color: #00d4ff;
+            border: 2px solid #00d4ff;
+            padding: 15px 40px;
+            font-size: 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 20px;
+        }
+
+        .action-btn:hover {
+            background: #00d4ff;
+            color: #000;
+            box-shadow: 0 0 20px #00d4ff;
+        }
+
+        /* رسالة سليم */
+        #secret-msg {
+            display: none;
+            margin-top: 30px;
+            font-size: 24px;
+            color: #ffeb3b;
+            padding: 15px;
+            border-top: 1px dashed #00d4ff;
+        }
     </style>
 </head>
 <body>
-    <p class="kfo">كفووو 🥳</p>
-    <h1>افتح الرسالةالحاليةمرحبا! 🎉</h1>
-    
-    <button class="btn" onclick="show()">انقر لرؤية الرسالة 📄👇</button>
 
-    <div id="msg">
-        <h2 style="color: #ff9800;">افتح الرسالة 🖨️</h2>
-        <p style="font-size: 22px; font-weight: bold;">انت بتحب الأندومي.</p>
+    <div class="dashboard">
+        <div style="font-size: 14px; opacity: 0.6;">نظام الإدارة المركزي v2.0</div>
+        
+        <div class="names">
+            محمد ⚔️ سليم
+        </div>
+
+        <p>مرحباً بك في واجهة التحكم الذكية</p>
+
+        <button class="action-btn" onclick="showMsg()">فتح الأوامر 🔓</button>
+
+        <div id="secret-msg">
+            📜 يا سليم، القائد محمد يقول لك: 
+            <br>
+            <strong>"خذ الأوراق وحطهن على الطابعة الآن"</strong>
+        </div>
     </div>
 
     <script>
-        function show() {
-            document.getElementById('msg').style.display = 'block';
+        function showMsg() {
+            document.getElementById('secret-msg').style.display = 'block';
         }
     </script>
+
 </body>
 </html>
