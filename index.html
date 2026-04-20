@@ -2,47 +2,31 @@
 <html dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="10"> <title>شاشة الاحتفال 🎉</title>
+    <meta http-equiv="refresh" content="10">
+    <title>سليم البطل</title>
     <style>
-        /* إعدادات الشاشة والخلفية */
-        body { 
-            background: #1a1a1a; 
-            color: white; 
-            text-align: center; 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-            padding-top: 50px; 
-            overflow: hidden; /* لمنع ظهور أشرطة التمرير بسبب الألعاب النارية */
-        }
-        
-        /* تأثير الألعاب النارية (الاحتفال) */
-        @keyframes firework {
-            0% { transform: translate(-50%, 60vh); width: 0.5vmin; opacity: 1; }
-            50% { width: 0.5vmin; opacity: 1; }
-            100% { width: 45vmin; opacity: 0; }
-        }
-        
-        /* عناصر الاحتفال */
-        .firework { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 0.5vmin; aspect-ratio: 1; background: #ff9800; border-radius: 50%; animation: firework 2s infinite; }
-        .firework:nth-child(2) { animation-delay: -0.5s; left: 30%; top: 40%; background: #00bcd4; }
-        .firework:nth-child(3) { animation-delay: -1s; left: 70%; top: 60%; background: #4caf50; }
-        
-        /* تأثير النص المتحرك "كفو" */
-        .kfo { font-size: 80px; color: #ffeb3b; text-shadow: 0 0 15px #ff9800; animation: blink 0.8s infinite; margin: 0; }
+        body { background: #1a1a1a; color: white; text-align: center; font-family: sans-serif; padding-top: 50px; }
+        .kfo { font-size: 60px; color: #ffeb3b; margin: 0; animation: blink 1s infinite; }
         @keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; } }
-        
-        /* الزر الخاص برسالة سليم */
-        .btn-message { 
-            background-color: #ff9800; 
-            color: #fff; 
-            border: none; 
-            padding: 15px 30px; 
-            font-size: 20px; 
-            border-radius: 10px; 
-            cursor: pointer; 
-            box-shadow: 0 5px 15px rgba(255,152,0,0.4);
-            margin-top: 30px;
-            transition: transform 0.2s, background-color 0.2s;
-        }
-        .btn-message:hover { background-color: #e68900; }
-        .btn-message:active { transform: scale(0.95); }
+        .btn { background: #ff9800; color: white; border: none; padding: 15px 30px; font-size: 20px; border-radius: 10px; margin-top: 20px; cursor: pointer; }
+        #msg { display: none; background: white; color: black; padding: 20px; border-radius: 15px; margin: 20px; border: 3px solid #ff9800; }
+    </style>
+</head>
+<body>
+    <p class="kfo">كفووو 🥳</p>
+    <h1>ألف مبروك يا بطل! 🎉</h1>
+    
+    <button class="btn" onclick="show()">انقر لرؤية الرسالة 📄👇</button>
 
+    <div id="msg">
+        <h2 style="color: #ff9800;">تنبيه للقائد سليم 🖨️</h2>
+        <p style="font-size: 22px; font-weight: bold;">يا سليم خذ الأوراق وحطهن على الطابعة الآن.</p>
+    </div>
+
+    <script>
+        function show() {
+            document.getElementById('msg').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
