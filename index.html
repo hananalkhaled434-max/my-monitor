@@ -2,16 +2,27 @@
 <html dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>نجحت المهمة</title>
+    <meta http-equiv="refresh" content="5">
+    <title>تحديث النظام</title>
     <style>
-        body { background: #1a1a1a; color: gold; text-align: center; font-family: sans-serif; padding-top: 100px; }
-        button { padding: 20px; font-size: 25px; background: orange; border: none; border-radius: 15px; cursor: pointer; color: black; font-weight: bold; box-shadow: 0 0 20px orange; }
+        body { background: #1a1a1a; color: #fff; text-align: center; font-family: sans-serif; padding-top: 50px; }
+        .loader-bar { width: 80%; background: #333; height: 30px; margin: 20px auto; border-radius: 15px; overflow: hidden; border: 1px solid #ff9800; }
+        .progress { width: 65%; background: #ff9800; height: 100%; animation: load 5s linear infinite; }
+        @keyframes load { 0% { width: 0%; } 100% { width: 100%; } }
+        .warning { color: #ff5252; font-weight: bold; font-size: 20px; }
     </style>
 </head>
 <body>
-    <h1>ألف مبروك يا بطل! 🚀</h1>
-    <p>أنت الآن مبرمج حقيقي، غيرت الكود من هاتفك الأول وستراه في الثاني فوراً.</p>
-    <br>
-    <button onclick="alert(يا سليم خود الوراق  وحطن على الطابعة🎉')">اضغط هنا للاحتفال 🎉</button>
+    <h1>🚀 ألف مبروك بطل يا سليم!</h1>
+    <p class="warning">⚠️ جاري فحص ملفات الألعاب...</p>
+    
+    <div class="loader-bar">
+        <div class="progress"></div>
+    </div>
+    
+    <p>جاري تحضير "أوراق الطباعة" كما طلبت.. 📄✅</p>
+    <hr>
+    <h2 style="color: yellow;">رسالة القائد:</h2>
+    <p>يا سليم خذ الورق وحطه على الطابعة 🖨️✨</p>
 </body>
 </html>
